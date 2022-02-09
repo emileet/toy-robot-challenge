@@ -24,7 +24,7 @@ cmake --build build
 
 ```shell
 ./build/TestToyRobot # unit tests
-./build/TestToy      # main application
+./build/ToyRobot      # main application
 ```
 
 ### Commands

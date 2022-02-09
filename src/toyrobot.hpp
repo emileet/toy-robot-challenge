@@ -227,6 +227,6 @@ private:
     bool m_placed;
     // the toy robot's current position
     vec2_t m_pos;
-    // the toy  robot's current facing
+    // the toy robot's current facing
     e_ToyFacing m_facing;
 };
