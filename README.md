@@ -8,10 +8,33 @@ The application is a simulation of a toy robot moving on a square table top, of 
 
 ## Dependencies
 
+* GCC (>=10.2.1)
 * CMake (>=3.12)
 * GoogleTest (1.11.0)
 
 ## Instructions
+
+### Setup
+
+```shell
+# setup docker (using debian in this example)
+docker pull debian:latest
+docker run -ti --rm --name toyrobot debian
+
+# install dependencies
+apt-get update
+apt-get install build-essential cmake git libgtest-dev
+
+# build googletest
+cd /usr/src/googletest
+cmake .
+cmake --build . --target install
+
+# clone repository
+cd ~
+git clone https://github.com/emileet/toy-robot-challenge
+cd ./toy-robot-challenge
+```
 
 ### Building
 
@@ -40,6 +63,6 @@ cmake --build build
 
 ## Notes
 
-- This project was developed for linux, where CMake and GoogleTest can be retrieved with your distributions respective package manager
+- This project was developed for linux, where CMake and GoogleTest can be retrieved with your distributions respective package manager (use arch or debian)
 - If you can't use GoogleTest, remove the last four lines from `CMakeLists.txt`
-- This project was built successfully with GCC 11.1.0
+- This project was built successfully with GCC 10.2.1 and 11.1.0

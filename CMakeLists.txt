@@ -13,5 +13,5 @@ add_executable(ToyRobot ./src/main.cpp)
 # unit tests with GoogleTest
 find_package(GTest CONFIG REQUIRED)
 add_executable(TestToyRobot ./tests/tests.cpp)
-target_link_libraries(TestToyRobot gtest)
+target_link_libraries(TestToyRobot gtest pthread)
 add_test(NAME Tests COMMAND TestToyRobot)
